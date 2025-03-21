@@ -7,19 +7,26 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-alert trigger="Carro" header="carro escolhida" message={{valorFinal}} [buttons]="alertButtons"></ion-alert>
+  <div id="container">
 
-  <ion-radio-group value="Carro" [(ngModel)]="carro">
-    <ion-radio value="normal">Normal</ion-radio><br />
-    <ion-radio value="superior">superior</ion-radio><br />
-    <ion-radio value="vip">Vip</ion-radio><br />
-  </ion-radio-group>
+    <ion-alert trigger="Carro" header="valor total viagem" message={{valorFinal}} [buttons]="alertButtons"></ion-alert>
 
-  <ion-label>quilômetros rodados</ion-label>
-  <ion-input [(ngModel)]="valorRodados" type="number" placeholder="Digite os quilômetros rodados"></ion-input>
+    <ion-radio-group value="Carro" [(ngModel)]="carro" id="lista-carros">
+      <ion-radio value="normal">Normal</ion-radio><br />
+      <ion-radio value="superior">superior</ion-radio><br />
+      <ion-radio value="vip">Vip</ion-radio><br />
+    </ion-radio-group>
 
-  <ion-button expand="full" id="dispara-alert" (click)="valorViagem()">Valor viaem</ionbutton>
+    <ion-label>quilômetros rodados</ion-label>
+    <ion-input [(ngModel)]="valorRodados" type="number" placeholder="Digite os quilômetros rodados"></ion-input>
 
 
-   
+ 
+
+
+    <ion-button expand="full" id="Carro" (click)="valorViagem()">Valor viagem</ion-button>
+
+
+
+  </div>
 </ion-content>
