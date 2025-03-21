@@ -1,20 +1,23 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      lista 02
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-alert trigger="Carro" header="carro escolhida" message={{CarroEscolhido}} [buttons]="alertButtons"></ion-alert>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-radio-group value="Carro" [(ngModel)]="carro">
+    <ion-radio value="normal">Normal</ion-radio><br />
+    <ion-radio value="superior">superior</ion-radio><br />
+    <ion-radio value="vip">Vip</ion-radio><br />
+  </ion-radio-group>
+
+  <ion-label>quilômetros rodados</ion-label>
+  <ion-input [(ngModel)]="valorRodados" type="number" placeholder="Digite os quilômetros rodados"></ion-input>
+
+  <ion-button expand="full" id="dispara-alert" (click)="valorViagem()">Valor viaem</ionbutton>
+
 </ion-content>
