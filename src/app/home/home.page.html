@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-alert trigger="Carro" header="carro escolhida" message={{CarroEscolhido}} [buttons]="alertButtons"></ion-alert>
+  <ion-alert trigger="Carro" header="carro escolhida" message={{valorFinal}} [buttons]="alertButtons"></ion-alert>
 
   <ion-radio-group value="Carro" [(ngModel)]="carro">
     <ion-radio value="normal">Normal</ion-radio><br />
@@ -20,4 +20,6 @@
 
   <ion-button expand="full" id="dispara-alert" (click)="valorViagem()">Valor viaem</ionbutton>
 
+
+   
 </ion-content>
