@@ -21,8 +21,6 @@ export class HomePage {
   valorMotorista = 0;
   valorApp = 0;
   valorViagem() {
-    this.valorFinal = this.valorRodados * this.ValorCarro
-
 
     switch (this.carro) {
       case 'normal':
@@ -37,15 +35,20 @@ export class HomePage {
     }
 
     if (this.valorFinal > 150) {
-      this.valorMotorista = this.valorFinal * (20 / 100);
-      this.valorApp = this.valorFinal * (80 / 100);
+      this.valorMotorista = this.valorFinal * (80 / 100);
+      this.valorApp = this.valorFinal * (20 / 100);
     } else {
-      this.valorMotorista = this.valorFinal * (25 / 100);
-      this.valorApp = this.valorFinal * (75 / 100);
+      this.valorMotorista = this.valorFinal * (75 / 100);
+      this.valorApp = this.valorFinal * (25 / 100);
     }
   }
 
-
-
 }
+
+
+
+
+
+
+
 
